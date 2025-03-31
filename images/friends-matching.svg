@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800px" height="600px" viewBox="0 0 800 600" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="gradient">
+            <stop stop-color="#4e54c8" offset="0%"></stop>
+            <stop stop-color="#8f94fb" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g stroke="none" fill="none">
+        <rect fill="url(#gradient)" opacity="0.3" x="0" y="0" width="800" height="600"></rect>
+        
+        <!-- Background Elements -->
+        <circle fill="#4e54c8" opacity="0.2" cx="200" cy="150" r="80"></circle>
+        <circle fill="#8f94fb" opacity="0.2" cx="600" cy="450" r="100"></circle>
+        <circle fill="#4e54c8" opacity="0.1" cx="400" cy="300" r="150"></circle>
+        
+        <!-- Person 1 -->
+        <circle fill="#4e54c8" cx="250" cy="300" r="50"></circle>
+        <circle fill="white" cx="250" cy="260" r="20"></circle>
+        <rect fill="#4e54c8" x="220" y="290" width="60" height="80" rx="20"></rect>
+        
+        <!-- Person 2 -->
+        <circle fill="#8f94fb" cx="550" cy="300" r="50"></circle>
+        <circle fill="white" cx="550" cy="260" r="20"></circle>
+        <rect fill="#8f94fb" x="520" y="290" width="60" height="80" rx="20"></rect>
+        
+        <!-- Connection Line -->
+        <path d="M300,300 C350,250 450,250 500,300" stroke="white" stroke-width="5" stroke-dasharray="10,10"></path>
+        
+        <!-- Connection Hearts -->
+        <path d="M390,270 C400,250 410,250 420,270 C430,250 440,250 450,270 C450,290 420,310 420,310 C420,310 390,290 390,270 Z" fill="#FF6B6B"></path>
+        
+        <!-- Text Elements -->
+        <text font-family="Arial" font-size="40" font-weight="bold" fill="white" x="270" y="150">
+            BuddyUp
+        </text>
+        <text font-family="Arial" font-size="24" fill="white" x="250" y="490">
+            Connect with your perfect match
+        </text>
+    </g>
+</svg>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800px" height="600px" viewBox="0 0 800 600" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="gradient">
+            <stop stop-color="#4e54c8" offset="0%"></stop>
+            <stop stop-color="#8f94fb" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g stroke="none" fill="none">
+        <rect fill="url(#gradient)" opacity="0.3" x="0" y="0" width="800" height="600"></rect>
+        
+        <!-- Background Elements -->
+        <circle fill="#4e54c8" opacity="0.1" cx="400" cy="300" r="250"></circle>
+        <circle fill="#8f94fb" opacity="0.2" cx="200" cy="200" r="70"></circle>
+        <circle fill="#4e54c8" opacity="0.2" cx="600" cy="400" r="90"></circle>
+        
+        <!-- Network Nodes -->
+        <!-- Person 1 (Center) -->
+        <circle fill="#4e54c8" cx="400" cy="300" r="40"></circle>
+        <circle fill="white" cx="400" cy="270" r="15"></circle>
+        <rect fill="#4e54c8" x="380" y="290" width="40" height="60" rx="15"></rect>
+        
+        <!-- Person 2 -->
+        <circle fill="#8f94fb" cx="250" cy="200" r="30"></circle>
+        <circle fill="white" cx="250" cy="180" r="12"></circle>
+        <rect fill="#8f94fb" x="235" y="192" width="30" height="45" rx="12"></rect>
+        
+        <!-- Person 3 -->
+        <circle fill="#8f94fb" cx="550" cy="200" r="30"></circle>
+        <circle fill="white" cx="550" cy="180" r="12"></circle>
+        <rect fill="#8f94fb" x="535" y="192" width="30" height="45" rx="12"></rect>
+        
+        <!-- Person 4 -->
+        <circle fill="#8f94fb" cx="250" cy="400" r="30"></circle>
+        <circle fill="white" cx="250" cy="380" r="12"></circle>
+        <rect fill="#8f94fb" x="235" y="392" width="30" height="45" rx="12"></rect>
+        
+        <!-- Person 5 -->
+        <circle fill="#8f94fb" cx="550" cy="400" r="30"></circle>
+        <circle fill="white" cx="550" cy="380" r="12"></circle>
+        <rect fill="#8f94fb" x="535" y="392" width="30" height="45" rx="12"></rect>
+        
+        <!-- Connection Lines -->
+        <line x1="400" y1="300" x2="250" y2="200" stroke="white" stroke-width="3" stroke-dasharray="5,5"></line>
+        <line x1="400" y1="300" x2="550" y2="200" stroke="white" stroke-width="3" stroke-dasharray="5,5"></line>
+        <line x1="400" y1="300" x2="250" y2="400" stroke="white" stroke-width="3" stroke-dasharray="5,5"></line>
+        <line x1="400" y1="300" x2="550" y2="400" stroke="white" stroke-width="3" stroke-dasharray="5,5"></line>
+        
+        <!-- Connection Icons -->
+        <circle fill="#FF6B6B" cx="325" cy="250" r="15"></circle>
+        <text font-family="Arial" font-size="20" font-weight="bold" fill="white" x="320" y="257">+</text>
+        
+        <circle fill="#FF6B6B" cx="475" cy="250" r="15"></circle>
+        <text font-family="Arial" font-size="20" font-weight="bold" fill="white" x="470" y="257">+</text>
+        
+        <circle fill="#FF6B6B" cx="325" cy="350" r="15"></circle>
+        <text font-family="Arial" font-size="20" font-weight="bold" fill="white" x="320" y="357">+</text>
+        
+        <circle fill="#FF6B6B" cx="475" cy="350" r="15"></circle>
+        <text font-family="Arial" font-size="20" font-weight="bold" fill="white" x="470" y="357">+</text>
+        
+        <!-- Text Elements -->
+        <text font-family="Arial" font-size="40" font-weight="bold" fill="white" x="300" y="120">
+            Join BuddyUp
+        </text>
+        <text font-family="Arial" font-size="24" fill="white" x="200" y="520">
+            Build your network of friends and connections
+        </text>
+    </g>
+</svg>
