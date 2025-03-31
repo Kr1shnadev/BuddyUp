@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800px" height="600px" viewBox="0 0 800 600" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="gradient">
+            <stop stop-color="#4e54c8" offset="0%"></stop>
+            <stop stop-color="#8f94fb" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g stroke="none" fill="none">
+        <rect fill="url(#gradient)" opacity="0.3" x="0" y="0" width="800" height="600"></rect>
+        
+        <!-- Background Elements -->
+        <circle fill="#4e54c8" opacity="0.1" cx="400" cy="300" r="200"></circle>
+        <circle fill="#8f94fb" opacity="0.2" cx="150" cy="150" r="60"></circle>
+        <circle fill="#4e54c8" opacity="0.2" cx="650" cy="450" r="80"></circle>
+        
+        <!-- Friend Group -->
+        <!-- Person 1 -->
+        <circle fill="#4e54c8" cx="300" cy="250" r="30"></circle>
+        <circle fill="white" cx="300" cy="230" r="12"></circle>
+        <rect fill="#4e54c8" x="285" y="242" width="30" height="45" rx="12"></rect>
+        
+        <!-- Person 2 -->
+        <circle fill="#8f94fb" cx="380" cy="200" r="30"></circle>
+        <circle fill="white" cx="380" cy="180" r="12"></circle>
+        <rect fill="#8f94fb" x="365" y="192" width="30" height="45" rx="12"></rect>
+        
+        <!-- Person 3 -->
+        <circle fill="#4e54c8" cx="460" cy="250" r="30"></circle>
+        <circle fill="white" cx="460" cy="230" r="12"></circle>
+        <rect fill="#4e54c8" x="445" y="242" width="30" height="45" rx="12"></rect>
+        
+        <!-- Person 4 -->
+        <circle fill="#8f94fb" cx="380" cy="300" r="30"></circle>
+        <circle fill="white" cx="380" cy="280" r="12"></circle>
+        <rect fill="#8f94fb" x="365" y="292" width="30" height="45" rx="12"></rect>
+        
+        <!-- Connection Lines -->
+        <line x1="300" y1="250" x2="380" y2="200" stroke="white" stroke-width="2"></line>
+        <line x1="380" y1="200" x2="460" y2="250" stroke="white" stroke-width="2"></line>
+        <line x1="460" y1="250" x2="380" y2="300" stroke="white" stroke-width="2"></line>
+        <line x1="380" y1="300" x2="300" y2="250" stroke="white" stroke-width="2"></line>
+        <line x1="300" y1="250" x2="460" y2="250" stroke="white" stroke-width="2"></line>
+        <line x1="380" y1="200" x2="380" y2="300" stroke="white" stroke-width="2"></line>
+        
+        <!-- Activity Icons -->
+        <circle fill="white" cx="200" cy="400" r="25"></circle>
+        <text font-family="Arial" font-size="30" font-weight="bold" fill="#4e54c8" x="192" y="410">+</text>
+        
+        <circle fill="white" cx="300" cy="400" r="25"></circle>
+        <text font-family="Arial" font-size="30" font-weight="bold" fill="#4e54c8" x="290" y="410">✓</text>
+        
+        <circle fill="white" cx="400" cy="400" r="25"></circle>
+        <text font-family="Arial" font-size="30" font-weight="bold" fill="#4e54c8" x="390" y="410">✉</text>
+        
+        <circle fill="white" cx="500" cy="400" r="25"></circle>
+        <text font-family="Arial" font-size="30" font-weight="bold" fill="#4e54c8" x="490" y="410">!</text>
+        
+        <circle fill="white" cx="600" cy="400" r="25"></circle>
+        <text font-family="Arial" font-size="30" font-weight="bold" fill="#4e54c8" x="590" y="410">⚙</text>
+        
+        <!-- Text Elements -->
+        <text font-family="Arial" font-size="40" font-weight="bold" fill="white" x="250" y="120">
+            BuddyUp Dashboard
+        </text>
+        <text font-family="Arial" font-size="24" fill="white" x="220" y="500">
+            Connect and manage your friendships
+        </text>
+    </g>
+</svg>
