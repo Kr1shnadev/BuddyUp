@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuddyUp - Find Your Perfect Buddy</title>
+    <link rel="stylesheet" href="match.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <h1>BuddyUp</h1>
+                <p>Connect with like-minded buddies</p>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link"><i class="fas fa-home"></i></a>
+                <a href="match.html" class="nav-link active"><i class="fas fa-user-friends"></i></a>
+                <a href="#" class="nav-link"><i class="fas fa-comments"></i></a>
+                <a href="#" class="nav-link"><i class="fas fa-user"></i></a>
+            </div>
+        </header>
+
+        <div class="match-content">
+            <div class="match-left">
+                <h2>Find Your Buddies</h2>
+                
+                <div class="filter-categories">
+                    <div class="filter-category" data-category="all">All</div>
+                    <div class="filter-category" data-category="food">Food</div>
+                    <div class="filter-category" data-category="coding">Coding</div>
+                    <div class="filter-category" data-category="gaming">Gaming</div>
+                    <div class="filter-category" data-category="fitness">Fitness</div>
+                    <div class="filter-category" data-category="music">Music</div>
+                    <div class="filter-category" data-category="travel">Travel</div>
+                </div>
+                
+                <div class="interest-filters" id="all-interests">
+                    <div class="interest-tag" data-interest="Italian Cuisine">Italian Cuisine</div>
+                    <div class="interest-tag" data-interest="Asian Cuisine">Asian Cuisine</div>
+                    <div class="interest-tag" data-interest="Baking">Baking</div>
+                    <div class="interest-tag" data-interest="Web Development">Web Development</div>
+                    <div class="interest-tag" data-interest="JavaScript">JavaScript</div>
+                    <div class="interest-tag" data-interest="Python">Python</div>
+                    <div class="interest-tag" data-interest="FPS Games">FPS Games</div>
+                    <div class="interest-tag" data-interest="Strategy Games">Strategy Games</div>
+                    <div class="interest-tag" data-interest="RPG Games">RPG Games</div>
+                    <div class="interest-tag" data-interest="Yoga">Yoga</div>
+                    <div class="interest-tag" data-interest="Running">Running</div>
+                    <div class="interest-tag" data-interest="Weightlifting">Weightlifting</div>
+                    <div class="interest-tag" data-interest="Rock">Rock</div>
+                    <div class="interest-tag" data-interest="Electronic">Electronic</div>
+                    <div class="interest-tag" data-interest="Production">Production</div>
+                    <div class="interest-tag" data-interest="Adventure Travel">Adventure Travel</div>
+                    <div class="interest-tag" data-interest="Food Tourism">Food Tourism</div>
+                    <div class="interest-tag" data-interest="Cultural Experiences">Cultural Experiences</div>
+                </div>
+                
+                <div class="interest-filters" id="food-interests" style="display: none;">
+                    <div class="interest-tag" data-interest="Italian Cuisine">Italian Cuisine</div>
+                    <div class="interest-tag" data-interest="Asian Cuisine">Asian Cuisine</div>
+                    <div class="interest-tag" data-interest="Baking">Baking</div>
+                    <div class="interest-tag" data-interest="BBQ">BBQ</div>
+                    <div class="interest-tag" data-interest="Vegan">Vegan</div>
+                    <div class="interest-tag" data-interest="Desserts">Desserts</div>
+                    <div class="interest-tag" data-interest="Coffee">Coffee</div>
+                    <div class="interest-tag" data-interest="Wine">Wine</div>
+                    <div class="interest-tag" data-interest="Food Photography">Food Photography</div>
+                </div>
+                
+                <div class="interest-filters" id="coding-interests" style="display: none;">
+                    <div class="interest-tag" data-interest="Web Development">Web Development</div>
+                    <div class="interest-tag" data-interest="Mobile Apps">Mobile Apps</div>
+                    <div class="interest-tag" data-interest="Data Science">Data Science</div>
+                    <div class="interest-tag" data-interest="Machine Learning">Machine Learning</div>
+                    <div class="interest-tag" data-interest="JavaScript">JavaScript</div>
+                    <div class="interest-tag" data-interest="Python">Python</div>
+                    <div class="interest-tag" data-interest="Open Source">Open Source</div>
+                    <div class="interest-tag" data-interest="Hackathons">Hackathons</div>
+                    <div class="interest-tag" data-interest="Blockchain">Blockchain</div>
+                </div>
+                
+                <div class="interest-filters" id="gaming-interests" style="display: none;">
+                    <div class="interest-tag" data-interest="FPS Games">FPS Games</div>
+                    <div class="interest-tag" data-interest="MOBA Games">MOBA Games</div>
+                    <div class="interest-tag" data-interest="RPG Games">RPG Games</div>
+                    <div class="interest-tag" data-interest="Strategy Games">Strategy Games</div>
+                    <div class="interest-tag" data-interest="Casual Games">Casual Games</div>
+                    <div class="interest-tag" data-interest="eSports">eSports</div>
+                    <div class="interest-tag" data-interest="Streaming">Streaming</div>
+                    <div class="interest-tag" data-interest="Game Development">Game Development</div>
+                    <div class="interest-tag" data-interest="Cosplay">Cosplay</div>
+                </div>
+                
+                <div class="interest-filters" id="fitness-interests" style="display: none;">
+                    <div class="interest-tag" data-interest="Yoga">Yoga</div>
+                    <div class="interest-tag" data-interest="Running">Running</div>
+                    <div class="interest-tag" data-interest="Weightlifting">Weightlifting</div>
+                    <div class="interest-tag" data-interest="Cycling">Cycling</div>
+                    <div class="interest-tag" data-interest="Hiking">Hiking</div>
+                    <div class="interest-tag" data-interest="Swimming">Swimming</div>
+                    <div class="interest-tag" data-interest="Martial Arts">Martial Arts</div>
+                    <div class="interest-tag" data-interest="Team Sports">Team Sports</div>
+                    <div class="interest-tag" data-interest="Nutrition">Nutrition</div>
+                </div>
+                
+                <div class="interest-filters" id="music-interests" style="display: none;">
+                    <div class="interest-tag" data-interest="Rock">Rock</div>
+                    <div class="interest-tag" data-interest="Hip Hop">Hip Hop</div>
+                    <div class="interest-tag" data-interest="Electronic">Electronic</div>
+                    <div class="interest-tag" data-interest="Classical">Classical</div>
+                    <div class="interest-tag" data-interest="Jazz">Jazz</div>
+                    <div class="interest-tag" data-interest="Instruments">Instruments</div>
+                    <div class="interest-tag" data-interest="Production">Production</div>
+                    <div class="interest-tag" data-interest="Concerts">Concerts</div>
+                    <div class="interest-tag" data-interest="DJing">DJing</div>
+                </div>
+                
+                <div class="interest-filters" id="travel-interests" style="display: none;">
+                    <div class="interest-tag" data-interest="Backpacking">Backpacking</div>
+                    <div class="interest-tag" data-interest="City Breaks">City Breaks</div>
+                    <div class="interest-tag" data-interest="Beach Holidays">Beach Holidays</div>
+                    <div class="interest-tag" data-interest="Road Trips">Road Trips</div>
+                    <div class="interest-tag" data-interest="Photography">Photography</div>
+                    <div class="interest-tag" data-interest="Food Tourism">Food Tourism</div>
+                    <div class="interest-tag" data-interest="Adventure Travel">Adventure Travel</div>
+                    <div class="interest-tag" data-interest="Cultural Experiences">Cultural Experiences</div>
+                    <div class="interest-tag" data-interest="Budget Travel">Budget Travel</div>
+                </div>
+
+                <div class="help-section">
+                    <h3>How to Match</h3>
+                    <p><i class="fas fa-arrow-up"></i> Swipe up or click the green button to accept a buddy</p>
+                    <p><i class="fas fa-arrow-down"></i> Swipe down or click the red button to reject a buddy</p>
+                    <p>We match you based on shared interests and compatibility!</p>
+                    <button class="btn-primary" id="show-tutorial"><i class="fas fa-question-circle"></i> Show Tutorial</button>
+                </div>
+            </div>
+
+            <div class="match-right">
+                <div class="swipe-indicators">
+                    <div class="swipe-indicator up"><i class="fas fa-check"></i></div>
+                    <div class="swipe-indicator down"><i class="fas fa-times"></i></div>
+                </div>
+
+                <div class="card-container">
+                    <!-- Cards will be dynamically inserted here by JavaScript -->
+                </div>
+
+                <div class="action-buttons">
+                    <button class="action-btn reject" id="reject-btn"><i class="fas fa-times"></i></button>
+                    <button class="action-btn accept" id="accept-btn"><i class="fas fa-check"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Match Popup -->
+    <div class="match-popup" id="match-popup">
+        <div class="match-content">
+            <h2><i class="fas fa-user-friends"></i> It's a Match!</h2>
+            <div class="match-profiles">
+                <div class="match-profile">
+                    <img id="user-img" src="" alt="Your profile">
+                </div>
+                <div class="match-profile">
+                    <img id="buddy-img" src="" alt="Buddy profile">
+                </div>
+            </div>
+            <p>You and <span id="buddy-name"></span> are now buddies! Start connecting!</p>
+            <div class="match-buttons">
+                <button class="btn-secondary" id="keep-swiping">Keep Swiping</button>
+                <button class="btn-primary" id="send-message">Send Message</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Swipe Tutorial -->
+    <div class="swipe-tutorial" id="swipe-tutorial">
+        <div class="tutorial-content">
+            <h3>How to Use BuddyUp</h3>
+            <div class="tutorial-steps">
+                <div class="tutorial-step">
+                    <div class="tutorial-icon up"><i class="fas fa-arrow-up"></i></div>
+                    <div class="tutorial-text">
+                        <strong>Swipe Up to Accept</strong> - If you like a buddy's profile, swipe up on their card or click the green check button to send them a match request.
+                    </div>
+                </div>
+                <div class="tutorial-step">
+                    <div class="tutorial-icon down"><i class="fas fa-arrow-down"></i></div>
+                    <div class="tutorial-text">
+                        <strong>Swipe Down to Reject</strong> - If you're not interested, swipe down on their card or click the red X button to move to the next buddy.
+                    </div>
+                </div>
+                <div class="tutorial-step">
+                    <div class="tutorial-icon"><i class="fas fa-filter"></i></div>
+                    <div class="tutorial-text">
+                        <strong>Filter by Interests</strong> - Use the interest tags on the left to filter buddies based on your preferences in different categories.
+                    </div>
+                </div>
+            </div>
+            <div class="tutorial-buttons">
+                <button class="btn-primary" id="got-it">Got it!</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="match.js"></script>
+</body>
+</html>

@@ -1,0 +1,817 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    max-width: none;
+    background-color: #fff;
+    border-radius: 0;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    border-bottom: 1px solid #eee;
+    background: linear-gradient(to right, #ffffff, #f8f9fa);
+}
+
+.logo h1 {
+    color: #e63946;
+    font-size: 28px;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.logo p {
+    color: #777;
+    font-size: 14px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-link {
+    color: #777;
+    font-size: 22px;
+    text-decoration: none;
+    transition: all 0.3s;
+    position: relative;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: #e63946;
+}
+
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, #e63946, #f9c74f);
+    border-radius: 3px;
+}
+
+/* Match Content */
+.match-content {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+    height: calc(100vh - 70px); /* Adjust based on header height */
+}
+
+.match-left {
+    width: 30%;
+    padding: 30px;
+    border-right: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+    background-color: #f8f9fa;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.match-right {
+    width: 70%;
+    padding: 30px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #ffffff 0%, #f5f7fa 100%);
+    height: 100%;
+}
+
+/* Filter Categories */
+.filter-categories {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.filter-categories::-webkit-scrollbar {
+    display: none;
+}
+
+.filter-category {
+    padding: 10px 15px;
+    background-color: #f8f9fa;
+    border-radius: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    color: #495057;
+    border: 1px solid #dee2e6;
+}
+
+.filter-category:last-child {
+    margin-right: 0;
+}
+
+.filter-category:hover {
+    background-color: #e9ecef;
+}
+
+.filter-category.active {
+    background-color: #457b9d;
+    color: white;
+    border-color: #457b9d;
+}
+
+/* Interest Filters */
+.interest-filters {
+    display: none;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+.interest-tag {
+    padding: 8px 15px;
+    background-color: #f8f9fa;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+    color: #495057;
+    border: 1px solid #dee2e6;
+}
+
+.interest-tag:hover {
+    background-color: #e9ecef;
+}
+
+.interest-tag.active {
+    background-color: #457b9d;
+    color: white;
+    border-color: #457b9d;
+}
+
+/* Help Section */
+.help-section {
+    margin-top: auto;
+    background-color: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid #eee;
+}
+
+.help-section h3 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.help-section p {
+    color: #666;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Card Container */
+.card-container {
+    width: 340px;
+    height: 480px;
+    position: relative;
+    perspective: 1000px;
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    background-color: white;
+    transform-style: preserve-3d;
+    transition: transform 0.5s, opacity 0.5s;
+    cursor: grab;
+}
+
+.card:active {
+    cursor: grabbing;
+}
+
+.card-image {
+    width: 100%;
+    height: 60%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.card-image::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(to top, rgba(0,0,0,0.5), transparent);
+}
+
+.card-content {
+    padding: 25px;
+}
+
+.card-name {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.card-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    font-size: 14px;
+    color: #666;
+}
+
+.card-info i {
+    margin-right: 8px;
+    color: #e63946;
+}
+
+.card-bio {
+    font-size: 15px;
+    color: #555;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.card-interests {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.card-interest {
+    padding: 6px 12px;
+    background: linear-gradient(to right, #e63946, #f9c74f);
+    color: white;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    box-shadow: 0 2px 5px rgba(230, 57, 70, 0.2);
+}
+
+/* Swipe Indicators */
+.swipe-indicators {
+    position: absolute;
+    width: 340px;
+    height: 480px;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.swipe-indicator {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.swipe-indicator.up {
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4CAF50;
+    color: white;
+}
+
+.swipe-indicator.down {
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #e63946;
+    color: white;
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: flex;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.action-btn {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.action-btn.reject {
+    background-color: #e63946;
+    color: white;
+}
+
+.action-btn.accept {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.action-btn:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Match Popup */
+.match-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+}
+
+.match-popup.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.match-popup .match-content {
+    background-color: white;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    animation: popIn 0.5s forwards;
+}
+
+@keyframes popIn {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.match-popup h2 {
+    color: #e63946;
+    font-size: 32px;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+.match-profiles {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.match-profile {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #e63946;
+    box-shadow: 0 8px 20px rgba(230, 57, 70, 0.3);
+    position: relative;
+}
+
+.match-profile::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    border-radius: 50%;
+    border: 2px solid #e63946;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.8);
+        opacity: 0.8;
+    }
+    70% {
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+}
+
+.match-profile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.match-popup p {
+    color: #555;
+    margin-bottom: 30px;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.match-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+/* Swipe Tutorial */
+.swipe-tutorial {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+}
+
+.swipe-tutorial.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.tutorial-content {
+    background-color: white;
+    padding: 40px;
+    border-radius: 20px;
+    width: 550px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    animation: slideIn 0.5s forwards;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.tutorial-content h3 {
+    color: #e63946;
+    font-size: 28px;
+    margin-bottom: 25px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.tutorial-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-bottom: 35px;
+}
+
+.tutorial-step {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 15px;
+    border-radius: 15px;
+    background-color: #f8f9fa;
+    transition: all 0.3s;
+}
+
+.tutorial-step:hover {
+    transform: translateX(5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.tutorial-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.tutorial-icon.up {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.tutorial-icon.down {
+    background-color: #e63946;
+    color: white;
+}
+
+.tutorial-text {
+    flex: 1;
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+}
+
+.tutorial-text strong {
+    color: #333;
+    font-weight: 600;
+}
+
+.tutorial-buttons {
+    display: flex;
+    justify-content: center;
+}
+
+/* Buttons */
+.btn-primary {
+    padding: 14px 30px;
+    background: linear-gradient(to right, #e63946, #f9c74f);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(230, 57, 70, 0.3);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(to right, #d62828, #f8961e);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(230, 57, 70, 0.4);
+}
+
+.btn-secondary {
+    padding: 14px 30px;
+    background-color: transparent;
+    color: #e63946;
+    border: 2px solid #e63946;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: rgba(230, 57, 70, 0.1);
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Animation Classes */
+.swipe-up {
+    transform: translateY(-150%) rotate(5deg);
+    opacity: 0;
+}
+
+.swipe-down {
+    transform: translateY(150%) rotate(-5deg);
+    opacity: 0;
+}
+
+/* Empty State */
+.card-content[style*="height: 100%"] {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+}
+
+.card-content[style*="height: 100%"] i {
+    font-size: 60px !important;
+    color: #e63946 !important;
+    margin-bottom: 25px !important;
+}
+
+.card-content[style*="height: 100%"] h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.card-content[style*="height: 100%"] p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .container {
+        height: 100vh;
+    }
+}
+
+@media (max-width: 992px) {
+    .match-left {
+        width: 35%;
+    }
+    
+    .match-right {
+        width: 65%;
+    }
+    
+    .card-container {
+        width: 320px;
+        height: 450px;
+    }
+    
+    .swipe-indicators {
+        width: 320px;
+        height: 450px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        height: 100vh;
+    }
+    
+    .match-content {
+        flex-direction: column;
+        height: calc(100vh - 70px);
+    }
+    
+    .match-left, .match-right {
+        width: 100%;
+        padding: 20px;
+    }
+    
+    .match-left {
+        border-right: none;
+        border-bottom: 1px solid #eee;
+        height: 40%;
+        overflow-y: auto;
+    }
+    
+    .match-right {
+        height: 60%;
+    }
+    
+    .header {
+        padding: 15px 20px;
+    }
+    
+    .logo h1 {
+        font-size: 24px;
+    }
+    
+    .nav-links {
+        gap: 20px;
+    }
+    
+    .nav-link {
+        font-size: 20px;
+    }
+    
+    .card-container {
+        width: 300px;
+        height: 420px;
+        margin: 20px 0;
+    }
+    
+    .swipe-indicators {
+        width: 300px;
+        height: 420px;
+    }
+    
+    .action-btn {
+        width: 60px;
+        height: 60px;
+        font-size: 24px;
+    }
+    
+    .match-popup .match-content {
+        width: 90%;
+        padding: 30px;
+    }
+    
+    .tutorial-content {
+        width: 90%;
+        padding: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card-container {
+        width: 280px;
+        height: 400px;
+    }
+    
+    .swipe-indicators {
+        width: 280px;
+        height: 400px;
+    }
+    
+    .card-content {
+        padding: 15px;
+    }
+    
+    .card-name {
+        font-size: 20px;
+    }
+    
+    .card-bio {
+        font-size: 14px;
+    }
+    
+    .action-buttons {
+        gap: 20px;
+    }
+    
+    .action-btn {
+        width: 55px;
+        height: 55px;
+        font-size: 22px;
+    }
+    
+    .match-profiles {
+        gap: 20px;
+    }
+    
+    .match-profile {
+        width: 90px;
+        height: 90px;
+    }
+}
