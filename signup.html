@@ -3,59 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BuddyUp - Sign Up</title>
+    <title>Sign Up - BuddyUp</title>
     <link rel="stylesheet" href="signup.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <div class="container">
-        <div class="form-container">
-            <div class="logo">
-                <h1>BuddyUp</h1>
-                <p>Create your account</p>
+    <div class="signup-container">
+        <div class="signup-box">
+            <div class="progress-bar">
+                <div class="progress" id="signup-progress"></div>
             </div>
             
-            <div class="form-wrapper">
-                <form id="signup-form">
-                    <div class="input-group">
-                        <i class="fas fa-user icon"></i>
-                        <input type="text" id="signup-name" placeholder="Full Name" required>
-                    </div>
-                    <div class="input-group">
-                        <i class="fas fa-envelope icon"></i>
-                        <input type="email" id="signup-email" placeholder="Email" required>
-                    </div>
-                    <div class="input-group">
-                        <i class="fas fa-lock icon"></i>
-                        <input type="password" id="signup-password" placeholder="Password" required>
-                        <i class="fas fa-eye toggle-password"></i>
-                    </div>
-                    <div class="input-group">
-                        <i class="fas fa-lock icon"></i>
-                        <input type="password" id="signup-confirm-password" placeholder="Confirm Password" required>
-                        <i class="fas fa-eye toggle-password"></i>
-                    </div>
-                    <div class="terms">
-                        <input type="checkbox" id="terms" required>
-                        <label for="terms">I agree to the <a href="#">Terms & Conditions</a></label>
-                    </div>
-                    <button type="submit" class="btn-submit">Create Account</button>
-                    <div class="login-link">
-                        <p>Already have an account? <a href="login.html">Login</a></p>
-                    </div>
-                </form>
+            <!-- Step 1: Email -->
+            <div class="step" id="step-email">
+                <h2>Welcome to BuddyUp!</h2>
+                <p class="subtitle">First, let's get your email address</p>
+                <div class="input-group">
+                    <input type="email" id="signup-email" placeholder="Enter your email" required>
+                </div>
+                <button class="btn-continue" onclick="nextStep('email')">Continue</button>
             </div>
-        </div>
-        
-        <div class="image-container">
-            <div class="overlay"></div>
-            <div class="welcome-text">
-                <h2>Join BuddyUp Today</h2>
-                <p>Connect with friends, share experiences, and build your network.</p>
+
+            <!-- Step 2: Name -->
+            <div class="step hidden" id="step-name">
+                <h2>What's your name?</h2>
+                <p class="subtitle">Let's make this personal</p>
+                <div class="input-group">
+                    <input type="text" id="signup-name" placeholder="Enter your first name" required>
+                </div>
+                <button class="btn-continue" onclick="nextStep('name')">Continue</button>
+                <button class="btn-back" onclick="prevStep()">Back</button>
+            </div>
+
+            <!-- Step 3: Date of Birth -->
+            <div class="step hidden" id="step-dob">
+                <h2>When were you born?</h2>
+                <p class="subtitle">Enter your date of birth</p>
+                <div class="dob-picker">
+                    <div class="date-input-wrapper">
+                        <input type="text" id="dob-input" class="date-input" required placeholder="DD-MM-YYYY" maxlength="10">
+                    </div>
+                    <div id="age-warning" class="age-warning" style="display: none;">
+                        <span>You must be at least 18 years old</span>
+                    </div>
+                </div>
+                <button class="btn-continue" onclick="nextStep('dob')">Continue</button>
+                <button class="btn-back" onclick="prevStep()">Back</button>
+            </div>
+
+            <!-- Step 4: Interests -->
+            <div class="step hidden" id="step-interests">
+                <h2>What are you into?</h2>
+                <p class="subtitle">Choose up to 5 interests</p>
+                <div class="interests-container">
+                    <div class="selected-interests" id="selected-interests">
+                        <p class="hint">Your selected interests will appear here</p>
+                    </div>
+                    <div class="interests-grid" id="interests-grid">
+                        <!-- Interests will be loaded here -->
+                    </div>
+                </div>
+                <p class="interest-count">Selected: <span id="interest-count">0</span>/5</p>
+                <button class="btn-continue" onclick="nextStep('interests')">Continue</button>
+                <button class="btn-back" onclick="prevStep()">Back</button>
             </div>
         </div>
     </div>
-
     <script src="signup.js"></script>
 </body>
 </html>
